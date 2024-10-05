@@ -29,12 +29,38 @@
         }
         main {
             padding: 20px;
+            max-width: 800px; /* Set a maximum width for the main content */
+            margin: auto; /* Center the main content */
         }
         h1 {
             font-size: 24px;
         }
         h2 {
             font-size: 20px;
+        }
+        img {
+            width: 150px; /* Set a width for the image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make it circular */
+        }
+        .title {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .learn-more-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px; /* Space above the button */
+        }
+        .learn-more-btn:hover {
+            background-color: #45a049; /* Darker green on hover */
         }
     </style>
 </head>
@@ -55,6 +81,10 @@
 </header>
 
 <main id="about">
+    <img src="IMG0044.jpg" alt="Laura D'Adamo">
+    <div class="title">Laura D'Adamo</div>
+    <div class="title">PhD Candidate in Clinical Psychology</div>
+    
     <h2>About Me</h2>
     <p>Hello! I am a PhD candidate in clinical psychology at Drexel University. My research uses digital technology to better understand mental health conditions in daily life and to develop, evaluate, and implement accessible and engaging mental health interventions. The overall goal of my work is to make evidence-based mental health treatments more accessible to the large number of people in need of care.</p>
     
@@ -70,7 +100,10 @@
         <li>National Institute of Mental Health National Service Research Award</li>
         <li>National Heart, Lung, and Blood Institute Predoctoral T32 Fellowship</li>
     </ul>
+
+    <a href="#" class="learn-more-btn">Learn more about my work</a> <!-- Button -->
 </main>
 
 </body>
 </html>
+
