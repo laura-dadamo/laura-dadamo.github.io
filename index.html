@@ -6,14 +6,31 @@
     <title>Laura D'Adamo - PhD Candidate</title>
     <link href="https://fonts.googleapis.com/css2?family=Aptos&family=Playfair+Display&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #001f3f; /* Navy Blue */
-            --secondary-color: #FFD700; /* Gold */
-            --background-color: #fafafa; /* Alabaster/near white */
-            --box-background: #f0f0f0;
-            --highlight-color: #001f3f;
-            --hover-shadow: rgba(0, 31, 63, 0.2);
-        }
+:root {
+    --primary-color: #1F487E; /* Navy Blue */
+    --secondary-color: #F4D35F; /* Gold */
+    --background-color: #FFFEF2; /* Light Green */
+    --highlight-color: #DC5B04; /* Burnt Orange */
+    --support-color: #248232; /* Green */
+    --energy-color: #1C325E; /* Darker Blue */
+    --hover-shadow: rgba(0, 31, 63, 0.2);
+    --additional-color1: #1C325E; /* Dark Blue */
+    --additional-color2: #EF8A17; /* Vibrant Orange */
+    --additional-color3: #2A7221; /* Another Green */
+    --box-background: #E8F5E9; /* Consider keeping it or adjusting */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav a:hover,
+footer a:hover {
+    color: var(--highlight-color);
+    text-shadow: 0 0 5px var(--highlight-color);
+}
+
 
         body {
             font-family: 'Aptos', sans-serif;
@@ -121,19 +138,23 @@ object-fit: cover;
             gap: 30px;
             margin-bottom: 40px;
         }
+.dynamic-box {
+    background-color: var(--box-background)
+}
 
-        .dynamic-box {
-            background-color: var(--box-background);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.dynamic-box {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
-        .dynamic-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px var(--hover-shadow);
-        }
+.dynamic-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px var(--hover-shadow);
+}
+
+.dynamic-box h3 {
+    text-align: center;
+    /* Optional: Add some margin adjustments if needed */
+}
 
         .learn-more-btn {
             display: block;
@@ -149,10 +170,15 @@ object-fit: cover;
             transition: background-color 0.3s;
         }
 
-        .learn-more-btn:hover {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-        }
+.learn-more-btn {
+    background-color: var(--highlight-color); /* Burnt Orange */
+}
+
+.learn-more-btn:hover {
+    background-color: var(--secondary-color); /* Gold */
+    color: var(--primary-color);
+}
+
 
         footer {
             background-color: var(--primary-color);
