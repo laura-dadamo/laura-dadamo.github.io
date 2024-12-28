@@ -4,221 +4,293 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura D'Adamo - PhD Candidate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aptos:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2B4C7E; /* Modern Blue */
-            --secondary-color: #F4A261; /* Soft Orange */
-            --background-color: #FAF9F6; /* Light Neutral */
-            --text-color: #2C2C2C; /* Dark Gray */
-            --light-text-color: #6E6E6E; /* Medium Gray */
-            --box-background: #FFFFFF; /* White */
-            --box-shadow: rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+            --primary-color: #1F487E; /* Deep Blue */
+            --secondary-color: #248232; /* Green */
+            --accent-color: #EF8A17; /* Vibrant Orange for accents */
+            --background-color: #F0F4F8; /* Light Cool Gray */
+            --text-color: #333333; /* Main text color */
+            --light-text-color: #555555; /* Lighter text for details */
+            --hover-shadow: rgba(31, 72, 126, 0.2); /* Subtle hover effect */
+            --box-background: #FFFFFF; /* White background for boxes */
+        }
+
+        html {
+            scroll-behavior: smooth;
+            height: 100%; /* Allow full height for body */
         }
 
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Aptos', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
+            font-size: 18px;
             line-height: 1.6;
+            display: flex; /* Use Flexbox for layout */
+            flex-direction: column; /* Stack items vertically */
+            min-height: 100vh; /* Make body take full height */
         }
 
         header {
+            padding: 30px 20px;
             background-color: var(--primary-color);
             color: white;
-            padding: 20px;
             text-align: center;
+            border-bottom: 4px solid var(--secondary-color);
         }
 
         header h1 {
-            font-family: 'Playfair Display', serif;
             font-size: 36px;
             margin: 0;
         }
 
         nav {
-            margin-top: 10px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            font-weight: 500;
-            margin: 0 15px;
             font-size: 16px;
-            transition: color 0.3s;
+            font-weight: 700;
+            padding: 10px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
             color: var(--secondary-color);
         }
 
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        main {
+            max-width: 1200px;
+            margin: auto;
             padding: 40px 20px;
-            gap: 30px;
-            background-color: var(--box-background);
-            box-shadow: 0 4px 10px var(--box-shadow);
+            flex: 1; /* Allow main to grow and fill space */
         }
 
-        .hero img {
-            width: 100%;
-            max-width: 400px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .hero-text {
-            flex: 1;
-            text-align: left;
-        }
-
-        .hero-text h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 28px;
+        h2, h3 {
             color: var(--primary-color);
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 22px;
             margin-bottom: 15px;
         }
 
-        .hero-text p {
-            font-size: 18px;
-            color: var(--text-color);
-            margin-bottom: 20px;
+        .about-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: flex-start;
+            margin-bottom: 60px;
         }
 
-        .cta-btn {
-            display: inline-block;
+        .home-content {
+            display: flex;
+            align-items: center;
+            gap: 30px; /* Space between image and text */
+        }
+
+        .home-content img {
+            width: 100%;
+            max-width: 350px; /* Adjust based on your design */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .home-text {
+            flex: 1;
+        }
+
+        .about-details p {
+            font-size: 18px;
+            color: var(--text-color);
+        }
+
+        .highlight-text {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .boxes-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .dynamic-box {
+            background-color: var(--box-background);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .dynamic-box:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px var(--hover-shadow);
+        }
+
+        .dynamic-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .dynamic-box li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .dynamic-box li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        .learn-more-btn {
+            display: block;
+            margin: 20px auto;
+            width: fit-content;
             padding: 12px 25px;
             background-color: var(--secondary-color);
             color: white;
             text-decoration: none;
-            font-weight: 700;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
         }
 
-        .cta-btn:hover {
+        .learn-more-btn:hover {
             background-color: var(--primary-color);
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-
-        .grid-item {
-            background-color: var(--box-background);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px var(--box-shadow);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .grid-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .grid-item h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 22px;
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-
-        .grid-item ul {
-            list-style: none;
-            padding: 0;
-            color: var(--light-text-color);
-            font-size: 16px;
         }
 
         footer {
             background-color: var(--primary-color);
             color: white;
+            padding: 30px 20px;
             text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+            margin-top: 60px;
         }
 
         footer p {
-            margin: 5px 0;
+            font-size: 16px;
+            margin: 0;
         }
 
         footer a {
-            color: var(--secondary-color);
+            color: white;
             text-decoration: none;
-            font-weight: 500;
+            font-weight: bold;
             margin: 0 10px;
+            transition: color 0.3s ease;
         }
 
         footer a:hover {
-            color: white;
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 18px;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .about-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .about-details {
+                text-align: center;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Laura D'Adamo</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#research">Research</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <section class="hero" id="home">
-        <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/blob/main/Untitled3.jpg?raw=true" alt="Laura D'Adamo">
-        <div class="hero-text">
-            <h2>Welcome to My World</h2>
-            <p>I am a clinical psychology PhD candidate at Drexel University. My work focuses on using digital technology to develop and implement accessible mental health interventions. Join me on my journey to make mental health care more inclusive and effective.</p>
-            <a href="#research" class="cta-btn">Explore My Work</a>
+<header>
+    <h1>Laura D'Adamo</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#research">Research</a>
+        <a href="#collaborators">Collaborators</a>
+        <a href="#cv">CV/Resume</a>
+    </nav>
+</header>
+
+<main>
+    <section id="home">
+        <div class="home-content">
+            <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/blob/main/Untitled3.jpg?raw=true" alt="Laura D'Adamo">
+            <div class="home-text">
+                <h2>Welcome!</h2>
+                <p>Hello! I am a PhD candidate in clinical psychology at Drexel University. My research uses digital technology to better understand mental health conditions in daily life and to develop, evaluate, and implement accessible and engaging mental health interventions. I have years of mixed methods research experience across academic and industry settings. <span class="highlight-text">The overall goal of my work is to make evidence-based mental health treatments more accessible to the large number of people in need of care.</span></p>
+                <a href="#research" class="learn-more-btn">Learn more about my work</a>
+            </div>
         </div>
     </section>
 
-    <div class="grid-container">
-        <div class="grid-item">
+    <div class="boxes-container">
+        <section class="dynamic-box">
             <h3>Research Interests</h3>
             <ul>
-                <li>Digital Mental Health</li>
-                <li>Eating Disorders</li>
-                <li>Implementation Science</li>
-                <li>Real-Time Monitoring</li>
+                <li>Digital mental health interventions</li>
+                <li>Eating disorders</li>
+                <li>Implementation science</li>
+                <li>Real-time monitoring</li>
             </ul>
-        </div>
-        <div class="grid-item">
+        </section>
+        
+        <section class="dynamic-box">
             <h3>Education</h3>
             <ul>
-                <li>PhD, Clinical Psychology, Drexel University (expected 2027)</li>
-                <li>MS, Psychology, Drexel University</li>
-                <li>BA, Psychology, Rutgers University</li>
+                <li>PhD in Clinical Psychology, Drexel University (expected 2027)</li>
+                <li>MS in Psychology, Drexel University</li>
+                <li>BA in Psychology, Rutgers University</li>
             </ul>
-        </div>
-        <div class="grid-item">
-            <h3>Grants & Awards</h3>
+        </section>
+    
+        <section class="dynamic-box">
+            <h3>Selected Grants/Fellowships</h3>
             <ul>
-                <li>NIMH F31 Grant</li>
-                <li>NIH T32 Fellowship</li>
+                <li>National Institute of Mental Health F31/National Research Service Award</li>
+                <li>National Heart, Lung, and Blood Institute Predoctoral T32 Fellowship</li>
             </ul>
-        </div>
+        </section>
     </div>
+</main>
 
-    <footer>
-        <p>Connect with me:</p>
-        <p>
-            <a href="https://linkedin.com/in/yourprofile">LinkedIn</a> |
-            <a href="https://github.com/laura-dadamo">GitHub</a>
-        </p>
-        <p>&copy; 2024 Laura D'Adamo. All rights reserved.</p>
-    </footer>
+<footer>
+    <p>Connect with me:</p>
+    <div class="social-links">
+        <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        <a href="https://github.com/laura-dadamo" target="_blank">GitHub</a>
+    </div>
+    <p>&copy; 2024 Laura D'Adamo. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
