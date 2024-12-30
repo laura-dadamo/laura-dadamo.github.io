@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Franklin+Gothic&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #f6f2ed; /* Warm light beige */
+            --primary-color: #fcf3e8; /* Warm light beige */
             --secondary-color: #6e2513; /* Deep reddish orange */
-            --tertiary-color: #5a6b54; /* Muted darker green */
-            --background-gradient: linear-gradient(to bottom, #6e2102, #fffaf4);
+            --tertiary-color: #3d1a07; /* Muted darker brown */
+            --background-gradient: linear-gradient(to bottom, #8f2a01, #fffaf4);
             --text-color: #333333;
             --hover-shadow: rgba(110, 37, 19, 0.3);
             --box-background: #f6f2ed;
@@ -20,6 +20,7 @@
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -193,13 +194,21 @@
 <nav>
     <div class="name">Laura D'Adamo</div>
     <div>
-        <a href="#home">Home</a>
+        <a href="javascript:void(0)" id="home-link">Home</a>
         <a href="research.html">Research</a>
         <a href="collaborators.html">Collaborators</a>
         <a href="publications.html">Publications</a>
         <a href="cv.html">CV/Resume</a>
     </div>
 </nav>
+
+<script>
+    document.getElementById('home-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
+    });
+</script>
+
 
 <main>
     <!-- Tagline Section -->
@@ -209,7 +218,7 @@
         </h1>
     </section>
 
-    <section id="home">
+    <section id="about">
         <div class="home-content">
             <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/blob/main/Untitled3.jpg?raw=true" alt="Laura D'Adamo">
             <div class="home-text">
@@ -255,6 +264,22 @@
         </div>
     </section>
 </main>
+
+<script>
+    document.getElementById('home-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default anchor behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
+    });
+</script>
+
+<script>
+    document.getElementById('home-link').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent default jump behavior
+        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll smoothly to the top
+    });
+</script>
+
+
 
 </body>
 </html>
