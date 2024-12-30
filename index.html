@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Franklin+Gothic&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #6e2513; /* Deep burnt orange */
-            --secondary-color: #f6f2ed; /* Warm light beige */
+            --primary-color: #f6f2ed; /* Warm light beige */
+            --secondary-color: #6e2513; /* Deep reddish orange */
             --tertiary-color: #5a6b54; /* Muted darker green */
-            --background-gradient: linear-gradient(to bottom, #fffaf4, #d1b4a3);
+            --background-gradient: linear-gradient(to bottom, #6e2102, #fffaf4);
             --text-color: #333333;
             --hover-shadow: rgba(110, 37, 19, 0.3);
-            --box-background: #5a6b54;
+            --box-background: #f6f2ed;
             --social-hover: rgba(110, 37, 19, 0.5); /* Hover effect for social icons */
         }
 
@@ -35,20 +35,19 @@
         }
 
         nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--secondary-color);
-    padding: 10px 20px;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-}
-
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--secondary-color);
+            padding: 10px 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 100;
+        }
 
         nav a {
             color: var(--primary-color);
@@ -110,23 +109,17 @@
             margin: 0 auto;
         }
 
-        .home-text h1 {
+        .intro-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .intro-text h1 {
             font-family: 'Franklin Gothic', sans-serif;
             font-size: 34px;
             color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .home-text h2 {
-            font-family: 'Franklin Gothic', sans-serif;
-            font-size: 26px;
-            color: var(--tertiary-color);
-            margin-top: 0;
-        }
-
-        .home-text p {
-            font-size: 18px;
-            color: var(--text-color);
+            margin: 50px 0;
         }
 
         .figure-container {
@@ -144,7 +137,7 @@
             flex: 1;
             color: var(--text-color);
             text-align: center;
-            background-color: var(--secondary-color);
+            background-color: var(--primary-color);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -152,7 +145,7 @@
 
         .figure-box h3 {
             font-size: 22px;
-            color: var(--tertiary-color); /* Title color changed to green */
+            color: var(--tertiary-color);
             margin-bottom: 10px;
         }
 
@@ -175,29 +168,12 @@
             margin-top: 40px;
         }
 
-        .socials a {
-            font-size: 24px;
-            color: var(--primary-color);
-            text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .socials a:hover {
-            color: var(--tertiary-color);
-            transform: scale(1.1);
-        }
-
-        footer {
-            background-color: var(--secondary-color);
-            color: var(--primary-color);
-            padding: 20px;
+        .copyright {
+            font-size: 14px;
+            color: var(--secondary-color);
+            justify-content: center;
             text-align: center;
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: bold;
+            margin-top: 20px;
         }
 
         @media (max-width: 768px) {
@@ -210,7 +186,6 @@
                 align-items: center;
             }
         }
-
     </style>
 </head>
 <body>
@@ -223,16 +198,17 @@
         <a href="collaborators.html">Collaborators</a>
         <a href="publications.html">Publications</a>
         <a href="cv.html">CV/Resume</a>
-
     </div>
 </nav>
 
 <main>
     <section id="home">
+        <div class="intro-text">
+            <h1>Bridging gaps and extending reach in mental health research and practice</h1>
+        </div>
         <div class="home-content">
             <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/blob/main/Untitled3.jpg?raw=true" alt="Laura D'Adamo">
             <div class="home-text">
-                <h1>Bridging gaps and extending reach in mental health research and practice</h1>
                 <h2>About me</h2>
                 <p>Hi! I am a PhD candidate in clinical psychology at Drexel University. I obtained a Bachelor of Arts in Psychology at Rutgers University and a Master of Science in Psychology at Drexel University.</p>
                 <p>As a researcher and clinician with experience working across academic and industry settings, my overall goal is to make evidence-based mental health care more accessible for those who need it. A major focus of my work is on leveraging digital technology to study mental health conditions in daily life and develop, test, and implement scalable mental health supports for specific populations and settings.</p>
@@ -261,7 +237,6 @@
             </div>
         </div>
 
-        <!-- Social Media Section -->
         <div class="socials">
             <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
             <a href="https://bluesky.com" target="_blank">Bluesky</a>
@@ -269,12 +244,11 @@
             <a href="mailto:contact@example.com">Email</a>
         </div>
 
+        <div class="copyright">
+            <p>&copy; 2024 Laura D'Adamo. All Rights Reserved.</p>
+        </div>
     </section>
 </main>
-
-<footer>
-    <p>&copy; 2024 Laura D'Adamo. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
