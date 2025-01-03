@@ -74,12 +74,21 @@
             transform: scaleX(1);
         }
 
-        nav .name {
-            font-family: 'Nunito', sans-serif;
-            font-size: 22px;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
+nav .name {
+    display: flex;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+nav .name .lettermark {
+    width: 38px;  /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;  /* Space between the logo and text */
+}
+
 
         main {
             max-width: 1200px;
@@ -116,7 +125,7 @@
         }
 
         .intro-text h1 {
-            font-family: 'Nunito', sans-serif;
+            font-family: 'Avenir', sans-serif;
             font-size: 30px;
             color: var(--primary-color);
             margin: 50px 0;
@@ -221,7 +230,10 @@
 <body>
 
 <nav>
-    <div class="name">Laura D'Adamo</div>
+    <div class="name">
+        <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="Laura D'Adamo Lettermark" class="lettermark">
+        LAURA D'ADAMO
+    </div>
     <div>
         <a href="javascript:void(0)" id="home-link">Home</a>
         <a href="research.html">Research</a>
@@ -230,6 +242,7 @@
         <a href="cv.html">CV/Resume</a>
     </div>
 </nav>
+
 
 <script>
     document.getElementById('home-link').addEventListener('click', function(event) {
@@ -242,7 +255,7 @@
 <main>
     <!-- Tagline Section -->
     <section id="tagline" style="text-align: center; padding: 350px 20px 350px;">
-        <h1 style="font-family: 'Nunito', sans-serif; font-size: 30px; color: var(--primary-color); margin: 0;">
+        <h1 style="font-family: 'Avenir', sans-serif; font-size: 30px; color: var(--primary-color); margin: 0;">
             Bridging gaps and extending reach in mental health research and practice
         </h1>
     </section>
