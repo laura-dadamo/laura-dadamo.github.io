@@ -58,21 +58,28 @@
             position: relative;
         }
 
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -3px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: var(--primary-color);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
+   nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d45448; /* Updated to a bold pop color */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
 
-        nav a:hover::after {
-            transform: scaleX(1);
-        }
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+
+nav div {
+    display: flex;
+    gap: 20px; /* Adjust the value to control spacing between tabs */
+}
+
 
 nav .name {
     display: flex;
@@ -89,6 +96,33 @@ nav .name .lettermark {
     margin-right: 10px;  /* Space between the logo and text */
 }
 
+#tagline h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background-color: #d45448; /* Use your bold pop color */
+    margin: 10px auto 0;
+    transition: width 1s ease-out;
+}
+
+#tagline h1 {
+    position: relative;
+    overflow: hidden;
+}
+
+#tagline h1::after {
+    animation: sweep 1.5s ease-out forwards;
+}
+
+@keyframes sweep {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
 
         main {
             max-width: 1200px;
@@ -102,7 +136,7 @@ nav .name .lettermark {
             flex-direction: column;
             align-items: center;
             gap: 30px;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
         }
 
         .home-content img {
@@ -187,19 +221,19 @@ nav .name .lettermark {
 }
 
 .socials a i {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--secondary-color); /* Match the icon color */
 }
 
 .socials a:hover i {
-    color: var(--primary-color); /* Highlight icon on hover */
+    color: #d45448; /* Highlight icon on hover */
 }
 
 .socials {
-    gap: 15px;
+    gap: 8px;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 5px;
 }
 
 
@@ -208,7 +242,7 @@ nav .name .lettermark {
             color: var(--secondary-color);
             justify-content: center;
             text-align: center;
-            margin-top: 10px;
+            margin-top: 5px;
         }
 
         @media (max-width: 768px) {
@@ -239,7 +273,7 @@ nav .name .lettermark {
         <a href="research.html">Research</a>
         <a href="publications.html">Publications</a>
         <a href="collaborators.html">Collaborators</a>
-        <a href="cv.html">CV/Resume</a>
+        <a href="cv.html">CV</a>
     </div>
 </nav>
 
@@ -271,20 +305,7 @@ nav .name .lettermark {
             </div>
 
 
-     <!-- Social Media Section -->
-<div class="socials">
-    <a href="mailto:lad374@drexel.edu">
-        <i class="fas fa-envelope"></i> Email
-    </a>
-    <a href="https://www.linkedin.com/in/laura-d-adamo-ms-696802162/" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-    <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank">
-        <i class="fas fa-graduation-cap"></i> Google Scholar
-    </a>
 
-
-</div>
         <div class="figure-container">
             <div class="figure-box">
                 <h3>Overall goals of my work</h3>
@@ -307,23 +328,27 @@ nav .name .lettermark {
 
    
 
-        </div>
+     <!-- Social Media Section -->
+<div class="socials">
+    <a href="mailto:lad374@drexel.edu">
+        <i class="fas fa-envelope"></i> Email
+    </a>
+    <a href="https://www.linkedin.com/in/laura-d-adamo-ms-696802162/" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+    </a>
+
+
+</div>
 
         <!-- Copyright Section -->
-        <div class="copyright" style="margin-top: 10px; font-size: 14px;">
+        <div class="copyright" style="margin-top: 5px; font-size: 14px;">
             <p>&copy; 2024 Laura D'Adamo. All Rights Reserved.</p>
         </div>
     </section>
 </main>
-
-<script>
-    document.getElementById('home-link').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent default anchor behavior
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to the top
-    });
-</script>
-
-
 
 
 
