@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Training · Laura D'Adamo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root{--teal-deep:#034147;--teal-mid:#055a63;--teal-light:#0a7a88;--cream:#fcf3e8;--cream-soft:#f6f2ed;--red:#d45448;--text:#2a2a2a;--text-muted:#5a5a5a;--text-light:#8a8a8a;--border:rgba(0,0,0,0.07)}
+        *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+        body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
+        nav{position:fixed;top:0;left:0;right:0;background:var(--teal-deep);display:flex;justify-content:space-between;align-items:center;padding:14px 40px;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+        .nav-name{display:flex;align-items:center;gap:10px;color:var(--cream);font-size:17px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+        .nav-name img{width:34px;height:auto}
+        .nav-links{display:flex;gap:28px}
+        .nav-links a{color:var(--cream);text-decoration:none;font-size:14px;opacity:.82;transition:opacity .2s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:1.5px;background:var(--red);transform:scaleX(0);transition:transform .25s ease}
+        .nav-links a:hover{opacity:1}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}.nav-links a.active{opacity:1}
+
+        .page-header{padding:110px 40px 52px;position:relative;border-bottom:1px solid var(--border)}
+        .page-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px;font-weight:600}
+        .page-header h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,4vw,48px);color:var(--teal-deep);line-height:1.18;margin-bottom:14px;letter-spacing:-.01em}
+        .page-header p{font-size:16px;color:var(--text-muted);max-width:580px;line-height:1.75}
+
+        main{max-width:860px;margin:0 auto;padding:64px 40px 100px}
+
+        .sec-title{font-family:'Fraunces',serif;font-size:24px;font-weight:300;color:var(--teal-deep);margin-bottom:26px;padding-bottom:12px;border-bottom:1px solid var(--border);letter-spacing:-.01em}
+
+        .training-entry{display:grid;grid-template-columns:150px 1fr;gap:0 22px;padding:22px 0;border-bottom:1px solid var(--border)}
+        .training-entry:last-child{border-bottom:none}
+        .training-date{font-size:13px;color:var(--text-light);padding-top:3px;line-height:1.5}
+        .training-title{font-size:16px;font-weight:600;color:var(--text);margin-bottom:3px}
+        .training-place{font-size:14px;color:var(--teal-deep);font-weight:500;margin-bottom:3px}
+        .training-super{font-size:13.5px;color:var(--text-light);font-style:italic;margin-bottom:7px}
+        .training-desc{font-size:14px;line-height:1.7;color:var(--text-muted)}
+
+        .rc-entry{display:grid;grid-template-columns:150px 1fr;gap:0 22px;padding:16px 0;border-bottom:1px solid var(--border)}
+        .rc-entry:last-child{border-bottom:none}
+        .rc-date{font-size:13px;color:var(--text-light);padding-top:2px}
+        .rc-title{font-size:15px;font-weight:600;color:var(--text);margin-bottom:3px}
+        .rc-meta{font-size:13.5px;color:var(--text-muted);line-height:1.6}
+
+        .section-gap{margin-top:52px}
+
+        footer{background:var(--teal-deep);padding:44px 40px;text-align:center}
+        .footer-socials{display:flex;justify-content:center;gap:28px;margin-bottom:16px;flex-wrap:wrap}
+        .footer-socials a{color:var(--cream);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:7px;opacity:.72;transition:opacity .2s}
+        .footer-socials a:hover{opacity:1}
+        .footer-copy{font-size:13px;color:var(--cream);opacity:.38}
+
+        @media(max-width:700px){
+            nav{padding:14px 24px}.nav-links{gap:16px}
+            .page-header{padding:90px 24px 48px}main{padding:48px 24px 72px}
+            .training-entry,.rc-entry{grid-template-columns:1fr}
+            .training-date,.rc-date{margin-bottom:6px}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-name" href="index.html">
+        <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="LD">
+        Laura D'Adamo
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="collaboration.html">Collaboration</a>
+        <a href="clinical.html" class="active">Clinical</a>
+    </div>
+</nav>
+
+<div class="page-header">
+    <p class="page-eyebrow">Clinical Training</p>
+    <h1>Clinical Experience & Training</h1>
+    <p>My clinical training has spanned individual and group psychotherapy, consultation, and assessment across the lifespan, with a focus on anxiety, eating disorders, mood, and health. I have trained across a range of settings including a university clinic, group practices, and academic medical centers at outpatient and inpatient levels.</p>
+</div>
+
+<main>
+
+    <h2 class="sec-title">Clinical Externships & Practica</h2>
+
+    <div class="training-entry">
+        <span class="training-date">Jul 2026 –</span>
+        <div>
+            <p class="training-title">Psychology Resident</p>
+            <p class="training-place">Rush University Medical Center — Chicago, IL</p>
+            <p class="training-super">Health Psychology track</p>
+            <p class="training-desc">Beginning July 2026.</p>
+        </div>
+    </div>
+
+    <div class="training-entry">
+        <span class="training-date">Jul 2025 – present</span>
+        <div>
+            <p class="training-title">Clinical Extern</p>
+            <p class="training-place">Children's Hospital of Philadelphia — Comprehensive Vascular Anomalies Program</p>
+            <p class="training-super">Dept. of Child and Adolescent Psychiatry &amp; Behavioral Sciences / Division of Oncology</p>
+            <p class="training-desc">Providing psychological consultation and intervention services to pediatric patients with vascular malformations in an integrated, multidisciplinary medical clinic, and psychotherapy to patients receiving inpatient oncology care.</p>
+        </div>
+    </div>
+
+    <div class="training-entry">
+        <span class="training-date">2024 – 2025</span>
+        <div>
+            <p class="training-title">Clinical Extern</p>
+            <p class="training-place">Center for Anxiety and Behavior Therapy — Bryn Mawr, PA</p>
+            <p class="training-desc">Conducted psychodiagnostic assessment and provided psychotherapy to adults and adolescents with primary anxiety and anxiety-related disorders using cognitive-behavioral treatments in a group practice setting.</p>
+        </div>
+    </div>
+
+    <div class="training-entry">
+        <span class="training-date">2023 – 2024</span>
+        <div>
+            <p class="training-title">Practicum Student</p>
+            <p class="training-place">Drexel University Psychological Services Center</p>
+            <p class="training-desc">Provided psychotherapy to adult and child clients from the community presenting with a range of mental health disorders (MDD, ADHD, GAD, adjustment disorder) using cognitive-behavioral therapies.</p>
+        </div>
+    </div>
+
+    <div class="section-gap">
+        <h2 class="sec-title">Clinical Roles on Research Studies</h2>
+    </div>
+
+    <div class="rc-entry">
+        <span class="rc-date">2022 – 2025</span>
+        <div>
+            <p class="rc-title">Assessor & Diagnostic Interviewer</p>
+            <p class="rc-meta">Drexel University WELL Center<br>Administered the Eating Disorder Examination to participants enrolled in eating disorder research studies.</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">2023 – 2024</span>
+        <div>
+            <p class="rc-title">Guided Self-Help Coach</p>
+            <p class="rc-meta">Washington University School of Medicine<br>Delivered CBT guided self-help to adults following intensive treatment for anorexia nervosa (NIMH R34).</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">2023 – 2024</span>
+        <div>
+            <p class="rc-title">Study Therapist</p>
+            <p class="rc-meta">Drexel University WELL Center<br>Delivered individual CBT to adults with bulimia nervosa or binge eating disorder; personalized app-delivered micro-interventions as a treatment augmentation (NIMH R34).</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">2024</span>
+        <div>
+            <p class="rc-title">Study Therapist</p>
+            <p class="rc-meta">Drexel University WELL Center<br>Delivered individual combined CBT for sleep disturbance and eating disorders to adolescents with binge-spectrum EDs and sleep disturbance.</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">2022 – 2024</span>
+        <div>
+            <p class="rc-title">Intervention Group Leader</p>
+            <p class="rc-meta">Drexel University WELL Center<br>Delivered lifestyle modification programs targeting loss-of-control eating and sleep disturbance to groups of higher-weight adolescents across two NIDDK-funded studies.</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">2022 – 2023</span>
+        <div>
+            <p class="rc-title">Study Therapist</p>
+            <p class="rc-meta">Drexel University WELL Center<br>Delivered individual CBT and components of ACT to adults with bulimia nervosa and binge eating disorder (NIMH R01).</p>
+        </div>
+    </div>
+
+    <div class="section-gap">
+        <h2 class="sec-title">Peer Supervision Experience</h2>
+    </div>
+
+    <div class="rc-entry">
+        <span class="rc-date">Jul 2025 – present</span>
+        <div>
+            <p class="rc-title">Peer Supervisor</p>
+            <p class="rc-meta">Drexel University Psychological Services Center<br>Directly supervising a clinical psychology doctoral practicum student in provision of psychological services, including case conceptualization, treatment planning, and psychotherapy.</p>
+        </div>
+    </div>
+    <div class="rc-entry">
+        <span class="rc-date">Feb – Jun 2023</span>
+        <div>
+            <p class="rc-title">Peer Supervisor</p>
+            <p class="rc-meta">Washington University School of Medicine<br>Supervised CBT guided self-help coaches' work with assigned users to ensure treatment adherence; provided feedback on clinical cases; led weekly group supervision meetings.</p>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-socials">
+        <a href="mailto:Laura.a.dadamo@drexel.edu"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/laura-d-adamo-ms-696802162/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Laura D'Adamo. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
