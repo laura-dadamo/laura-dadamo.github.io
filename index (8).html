@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laura D'Adamo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root{
+            --teal-deep:#034147;--teal-mid:#055a63;--teal-light:#0a7a88;
+            --cream:#fcf3e8;--cream-soft:#f6f2ed;--red:#d45448;
+            --text:#2a2a2a;--text-muted:#5a5a5a;--text-light:#8a8a8a;--border:rgba(0,0,0,0.07);
+        }
+        *{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);min-height:100vh;-webkit-font-smoothing:antialiased}
+
+        nav{position:fixed;top:0;left:0;right:0;background:var(--teal-deep);display:flex;justify-content:space-between;align-items:center;padding:14px 40px;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+        .nav-name{display:flex;align-items:center;gap:10px;color:var(--cream);font-size:17px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+        .nav-name img{width:34px;height:auto}
+        .nav-links{display:flex;gap:28px}
+        .nav-links a{color:var(--cream);text-decoration:none;font-size:14px;font-weight:400;letter-spacing:.04em;opacity:.82;transition:opacity .2s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:1.5px;background:var(--red);transform:scaleX(0);transition:transform .25s ease}
+        .nav-links a:hover{opacity:1}
+        .nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+        .nav-links a.active{opacity:1}
+
+        .hero{
+            min-height:100vh;
+            background:linear-gradient(165deg,var(--teal-deep) 0%,var(--teal-mid) 45%,var(--teal-light) 100%);
+            display:flex;align-items:center;justify-content:center;
+            padding:100px 40px 60px;
+            position:relative;overflow:hidden;
+        }
+        .hero::before{content:'';position:absolute;bottom:-60px;right:-60px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(252,243,232,.07)}
+        .hero::after{content:'';position:absolute;bottom:-120px;right:-120px;width:620px;height:620px;border-radius:50%;border:1px solid rgba(252,243,232,.04)}
+        .hero-inner{max-width:1060px;width:100%;display:grid;grid-template-columns:200px 1fr;gap:72px;align-items:center}
+        .hero-photo-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;animation:fadeUp .9s ease both}
+        .hero-photo-wrap img{width:100%;max-width:200px;border-radius:10px;box-shadow:0 12px 40px rgba(0,0,0,.3)}
+        .hero-caption{color:rgba(252,243,232,.65);font-size:13px;text-align:center}
+        .hero-text{color:var(--cream);animation:fadeUp .9s ease .15s both}
+        .hero-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;opacity:.52;margin-bottom:20px;font-weight:500}
+        .hero-text h1{
+            font-family:'Fraunces',serif;
+            font-size:clamp(26px,3vw,40px);
+            font-weight:300;
+            line-height:1.22;
+            margin-bottom:22px;
+        }
+        .hero-text h1 em{font-style:italic;color:#a8dde2}
+        .hero-text p{font-size:16px;line-height:1.8;opacity:.8;max-width:500px;margin-bottom:32px}
+        .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+        .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;font-family:'DM Sans',sans-serif}
+        .btn-solid{background:var(--red);color:#fff;border:1.5px solid var(--red)}
+        .btn-solid:hover{background:#bf4139;border-color:#bf4139}
+        .btn-outline{border:1.5px solid rgba(252,243,232,.45);color:var(--cream)}
+        .btn-outline:hover{border-color:var(--cream);background:rgba(252,243,232,.08)}
+
+        .welcome-section{max-width:1060px;margin:0 auto;padding:80px 40px;display:grid;grid-template-columns:1fr 300px;gap:72px;align-items:start}
+
+        .welcome-text h2{font-family:'Fraunces',serif;font-size:28px;font-weight:300;color:var(--teal-deep);margin-bottom:20px;line-height:1.2}
+        .welcome-text p{font-size:16px;line-height:1.85;color:var(--text-muted);margin-bottom:16px}
+        .welcome-text p:last-of-type{margin-bottom:22px}
+        .link-arrow{display:inline-flex;align-items:center;gap:8px;color:var(--teal-deep);font-size:15px;font-weight:500;text-decoration:none;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s}
+        .link-arrow:hover{color:var(--red);border-color:var(--red)}
+
+        .aside-stack{display:flex;flex-direction:column;gap:24px;padding-top:6px}
+        .aside-item-label{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-light);font-weight:600;margin-bottom:6px}
+        .aside-item p{font-size:14px;line-height:1.68;color:var(--text-muted)}
+        .aside-item strong{color:var(--text);font-weight:500}
+        .aside-divider{border:none;border-top:1px solid var(--border)}
+
+        footer{background:var(--teal-deep);padding:44px 40px;text-align:center}
+        .footer-socials{display:flex;justify-content:center;gap:28px;margin-bottom:16px;flex-wrap:wrap}
+        .footer-socials a{color:var(--cream);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:7px;opacity:.72;transition:opacity .2s}
+        .footer-socials a:hover{opacity:1}
+        .footer-copy{font-size:13px;color:var(--cream);opacity:.38}
+
+        @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+        @media(max-width:860px){
+            nav{padding:14px 24px}.nav-links{gap:16px}
+            .hero-inner{grid-template-columns:1fr;gap:32px;text-align:center}
+            .hero-text p{max-width:100%}.hero-btns{justify-content:center}
+            .hero-photo-wrap img{max-width:160px}
+            .welcome-section{grid-template-columns:1fr;padding:56px 24px;gap:44px}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-name" href="index.html">
+        <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="LD">
+        Laura D'Adamo
+    </a>
+    <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="collaboration.html">Collaboration</a>
+        <a href="clinical.html">Clinical</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-photo-wrap">
+            <img src="https://raw.githubusercontent.com/laura-dadamo/laura-dadamo.github.io/main/2025.jpg" alt="Laura D'Adamo">
+            <span class="hero-caption">Laura D'Adamo, M.S.</span>
+        </div>
+        <div class="hero-text">
+            <p class="hero-eyebrow">PhD Candidate in Clinical Psychology</p>
+            <h1>Using technology to understand <br>mental health and get effective care<br>to the people who need it.</h1>
+            <p>I study processes that drive eating disorders and other mental health conditions in daily life — and develop, test, and scale digital interventions that reach people who need them.</p>
+            <div class="hero-btns">
+                <a href="research.html" class="btn btn-solid">Research</a>
+                <a href="LauraD_Adamo_CurriculumVitae.docx" class="btn btn-outline" target="_blank"><i class="fas fa-file-alt"></i> CV</a>
+                <a href="mailto:Laura.a.dadamo@drexel.edu" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="welcome-section">
+    <div class="welcome-text">
+        <h2>Welcome!</h2>
+        <p>I am a PhD Candidate in Clinical Psychology at Drexel University, where I study what maintains disordered eating in everyday life and work to develop scalable, technology-enabled supports that can reach people who face barriers to traditional care.</p>
+        <p>I care deeply about collaboration and mentorship, and I welcome opportunities to connect with others who share these interests. Please feel free to reach out!</p>
+        <a href="aboutme.html" class="link-arrow">More about me <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="aside-stack">
+        <div class="aside-item">
+            <p class="aside-item-label">Current Position</p>
+            <p><strong>PhD Candidate</strong>, Clinical Psychology<br>Drexel University, Philadelphia, PA<br>Mentor: Stephanie M. Manasse, Ph.D.</p>
+        </div>
+        <hr class="aside-divider">
+        <div class="aside-item">
+            <p class="aside-item-label">Beginning July 2026</p>
+            <p>Psychology Resident, <strong>Rush University Medical Center</strong>, Chicago, IL</p>
+        </div>
+        <hr class="aside-divider">
+        <div class="aside-item">
+            <a href="LauraD_Adamo_CurriculumVitae.docx" target="_blank" style="display:inline-flex;align-items:center;gap:8px;color:var(--teal-deep);font-size:14px;font-weight:500;text-decoration:none;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s" onmouseover="this.style.color='var(--red)';this.style.borderColor='var(--red)'" onmouseout="this.style.color='var(--teal-deep)';this.style.borderColor='transparent'"><i class="fas fa-file-alt"></i> Download CV</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-socials">
+        <a href="mailto:Laura.a.dadamo@drexel.edu"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/laura-d-adamo-ms-696802162/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Laura D'Adamo. All Rights Reserved.</p>
+</footer>
+</body>
+</html>

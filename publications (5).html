@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications · Laura D'Adamo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root{--teal-deep:#034147;--teal-mid:#055a63;--teal-light:#0a7a88;--cream:#fcf3e8;--cream-soft:#f6f2ed;--red:#d45448;--text:#2a2a2a;--text-muted:#5a5a5a;--text-light:#8a8a8a;--border:rgba(0,0,0,0.07)}
+        *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+        body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased}
+        nav{position:fixed;top:0;left:0;right:0;background:var(--teal-deep);display:flex;justify-content:space-between;align-items:center;padding:14px 40px;z-index:200;box-shadow:0 2px 12px rgba(0,0,0,.15)}
+        .nav-name{display:flex;align-items:center;gap:10px;color:var(--cream);font-size:17px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;text-decoration:none}
+        .nav-name img{width:34px;height:auto}
+        .nav-links{display:flex;gap:28px}
+        .nav-links a{color:var(--cream);text-decoration:none;font-size:14px;opacity:.82;transition:opacity .2s;position:relative}
+        .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:1.5px;background:var(--red);transform:scaleX(0);transition:transform .25s ease}
+        .nav-links a:hover{opacity:1}.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}.nav-links a.active{opacity:1}
+
+        .page-header{padding:110px 40px 52px;position:relative;border-bottom:1px solid var(--border)}
+        .page-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:14px;font-weight:600}
+        .page-header h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(28px,4vw,48px);color:var(--teal-deep);line-height:1.18;margin-bottom:14px;letter-spacing:-.01em}
+        .page-header p{font-size:16px;color:var(--text-muted);max-width:580px;line-height:1.75}
+
+        main{max-width:860px;margin:0 auto;padding:60px 40px 100px}
+
+        .pub-group{margin-bottom:48px}
+        .group-label{font-family:'Fraunces',serif;font-size:20px;font-weight:300;color:var(--teal-deep);margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--border);letter-spacing:-.01em}
+
+        .pub{padding:16px 0;border-bottom:1px solid var(--border)}
+        .pub:last-child{border-bottom:none}
+        .pub-title{font-size:15px;font-weight:600;color:var(--text);line-height:1.4;margin-bottom:5px}
+        .pub-title a{color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s,color .2s}
+        .pub-title a:hover{color:var(--teal-deep);border-color:var(--teal-deep)}
+        .pub-authors{font-size:13.5px;color:var(--text-muted);margin-bottom:3px;line-height:1.55}
+        .pub-authors strong{color:var(--text);font-weight:500}
+        .pub-journal{font-size:13.5px;color:var(--text-muted);font-style:italic}
+
+        .scholar-link{display:inline-flex;align-items:center;gap:8px;color:var(--teal-deep);font-size:15px;font-weight:500;text-decoration:none;border-bottom:1.5px solid transparent;transition:color .2s,border-color .2s;margin-top:36px}
+        .scholar-link:hover{color:var(--red);border-color:var(--red)}
+
+        footer{background:var(--teal-deep);padding:44px 40px;text-align:center}
+        .footer-socials{display:flex;justify-content:center;gap:28px;margin-bottom:16px;flex-wrap:wrap}
+        .footer-socials a{color:var(--cream);text-decoration:none;font-size:14px;display:flex;align-items:center;gap:7px;opacity:.72;transition:opacity .2s}
+        .footer-socials a:hover{opacity:1}
+        .footer-copy{font-size:13px;color:var(--cream);opacity:.38}
+
+        @media(max-width:700px){
+            nav{padding:14px 24px}.nav-links{gap:16px}
+            .page-header{padding:90px 24px 48px}main{padding:48px 24px 72px}
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a class="nav-name" href="index.html">
+        <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="LD">
+        Laura D'Adamo
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html" class="active">Publications</a>
+        <a href="mentorship.html">Mentorship</a>
+        <a href="clinical.html">Clinical</a>
+    </div>
+</nav>
+
+<div class="page-header">
+    <p class="page-eyebrow">Publications</p>
+    <h1>Peer-Reviewed Work</h1>
+    <p>^co-first authors contributing equally &nbsp;·&nbsp; *student mentee</p>
+</div>
+
+<main>
+
+    <!-- IN PRESS -->
+    <div class="pub-group">
+        <p class="group-label">In Press</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1186/s44247-024-00140-6" target="_blank">Understanding the provider experience with digital tools in blended care therapy: A mixed-methods evaluation</a></p>
+            <p class="pub-authors">Lattie, E.G., <strong>D'Adamo, L.</strong>, Beltzer, M., Varra, A., Chen, C., &amp; Lungu, A.</p>
+            <p class="pub-journal">Digital Health</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://preprints.jmir.org/preprint/73447" target="_blank">Temporal associations between body checking and eating pathology in adolescent girls with binge-spectrum eating disorders: A registered protocol</a></p>
+            <p class="pub-authors">*Moussaoui, J.R., Manasse, S.M., &amp; <strong>D'Adamo, L.</strong></p>
+            <p class="pub-journal">JMIR Research Protocols</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.psc.2025.08.015" target="_blank">Leveraging technology to enhance eating disorder treatment outcomes</a></p>
+            <p class="pub-authors">^*Howe, C.P., ^<strong>D'Adamo, L.</strong>, &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">Psychiatric Clinics of North America</p>
+        </div>
+    </div>
+
+    <!-- 2026 -->
+    <div class="pub-group">
+        <p class="group-label">2026</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.70105" target="_blank">Acceptability, feasibility, and preliminary effectiveness of a mobile app for teens with or at high risk for eating disorders: A three-arm pilot randomized controlled trial</a></p>
+            <p class="pub-authors">^Cavazos-Rehg, P.A., ^Fitzsimmons-Craft, E.E., Kasson, E., Szlyk, H.S., Li, X., Smith, A.C., <strong>D'Adamo, L.</strong>, Lew, D., Taylor, C.B., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1080/10640266.2026.2616486" target="_blank">Is sleep disturbance associated with treatment outcome among individuals with binge-spectrum eating disorders? A preliminary study</a></p>
+            <p class="pub-authors">Manasse, S.M., Lampe, E.W., <strong>D'Adamo, L.</strong>, Wetherall, L., &amp; Juarascio, A.S.</p>
+            <p class="pub-journal">Eating Disorders, 1–15</p>
+        </div>
+    </div>
+
+    <!-- 2025 -->
+    <div class="pub-group">
+        <p class="group-label">2025</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/oby.70073" target="_blank">Facets of dietary restraint associated with disordered eating behaviors among children and adolescents with higher weight</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Christian, C., Jebeile, H., Wilfley, D.E., Eddy, K.T., Boutelle, K., Zucker, N., Peterson, C.B., Celio-Doyle, A., Le Grange, D., &amp; Goldschmidt, A.B.</p>
+            <p class="pub-journal">Obesity</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24565" target="_blank">Detecting eating disorders from social media content: What has been done and where do we go next?</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, *Moussaoui, J.R., Chu, D., Graver, H., Taylor, C.B., Wilfley, D.E., Sadeh-Sharvit, S., Jacobson, N.C., Cavazos-Rehg, P., Manasse, S.M., Lerman, K., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1007/s10578-025-01906-3" target="_blank">Factor structure, measurement invariance, and prevalence of ARFID using the Farsi version of the Nine-Item ARFID Screen among Iranian adolescents</a></p>
+            <p class="pub-authors">Sahlan, R., Zickgraf, H., <strong>D'Adamo, L.</strong>, &amp; Saunders, J.</p>
+            <p class="pub-journal">Child Psychiatry and Human Development</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24427" target="_blank">Examining prevalence and presentations of eating disorders across racial/ethnic groups in a national, population-based sample of college students</a></p>
+            <p class="pub-authors">*Howe, C.P., Baik, E.Y., <strong>D'Adamo, L.</strong>, Kouveliotes, M., Pan, Z., Monocello, L., Firebaugh, M.L., Eisenberg, D., Newman, M.G., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1186/s44247-024-00140-6" target="_blank">Development and usability testing of an online platform for provider training and implementation of CBT guided self-help for eating disorders</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, *Laboe, A.A., *Goldberg, J., *Howe, C.P., Fennig Steinhoff, M., DePietro, B., Firebaugh, M.L., Cooper, Z., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">BMC Digital Health, 3(2)</p>
+        </div>
+    </div>
+
+    <!-- 2024 -->
+    <div class="pub-group">
+        <p class="group-label">2024</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1186/s40337-024-01132-7" target="_blank">Psychological interventions for internalized weight stigma: A systematic scoping review of feasibility, acceptability, and preliminary efficacy</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Shonrock, A.T., Monocello, L., *Goldberg, J., Yaeger, L.H., Pearl, R.L., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">Journal of Eating Disorders, 12(197)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24260" target="_blank">Effects of chatbot components to facilitate mental health services use in individuals with eating disorders: An optimization RCT</a></p>
+            <p class="pub-authors">Fitzsimmons-Craft, E.E., Rackoff, G.N., *Shah, J., Strayhorn, J.C., <strong>D'Adamo, L.</strong>, DePietro, B., *Howe, C.P., Firebaugh, M.L., Newman, M.G., Collins, L.M., Taylor, C.B., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24197" target="_blank">Evaluating online training for therapist delivery of interpersonal psychotherapy for eating disorders</a></p>
+            <p class="pub-authors">Karam Jones, A., Fitzsimmons-Craft, E.E., <strong>D'Adamo, L.</strong>, Eichen, D.M., Graham, A.K., Kolko Conlon, R.P., Balantekin, K.N., Welch, R.R., Agras, W.S., Wilson, G.T., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/erv.3082" target="_blank">Rates and correlates of study enrollment and use of a chatbot aimed to promote mental health services use for eating disorders following online screening</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Grammer, A.C., Rackoff, G.N., *Shah, J., Firebaugh, M.L., Taylor, C.B., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">European Eating Disorders Review</p>
+        </div>
+    </div>
+
+    <!-- 2023 -->
+    <div class="pub-group">
+        <p class="group-label">2023</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1186/s40337-023-00939-0" target="_blank">Prevalence, characteristics, and correlates of ARFID among adult respondents to the NEDA online screen: A cross-sectional study</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Smolar, L., Balantekin, K.N., Taylor, C.B., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">Journal of Eating Disorders, 11(214)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24099" target="_blank">Trajectories of therapeutic skills use and their dynamic relations to symptom change during CBT for bulimia nervosa</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Linardon, J., Manasse, S.M., &amp; Juarascio, A.S.</p>
+            <p class="pub-journal">International Journal of Eating Disorders, 1–11</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.24065" target="_blank">Preferred treatment focus among college students with eating disorders and comorbid mental health problems in a digital CBT guided self-help program</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Grammer, A.C., Rackoff, G.N., Fitzsimmons-Craft, E.E., Lipson, S.K., Newman, M.G., Taylor, C.B., Eisenberg, D., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders, 1–9</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.eatbeh.2023.101791" target="_blank">Relations between forms of dietary restraint, restriction, and loss-of-control eating among adolescents seeking weight control: An EMA study</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Sonnenblick, R.M., Juarascio, A.S., &amp; Manasse, S.M.</p>
+            <p class="pub-journal">Eating Behaviors, 50, 101791</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.eatbeh.2023.101789" target="_blank">Evaluating a combined, online intervention for binge-type eating disorders and higher weight in young adults</a></p>
+            <p class="pub-authors">Grammer, A.C., Monterubio, G., <strong>D'Adamo, L.</strong>, Balantekin, K.N., Taylor, C.B., Fitzsimmons-Craft, E.E., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">Eating Behaviors, 50, 101789</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.eatbeh.2023.101776" target="_blank">The relation of food insecurity to eating disorder characteristics and treatment-seeking among adult respondents to the NEDA online screen</a></p>
+            <p class="pub-authors">*^Laboe, A.A., ^<strong>D'Adamo, L.</strong>, Grammer, A.C., McGinnis, C., Davison, G., Balantekin, K.N., Graham, A.K., Smolar, L., Taylor, C.B., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">Eating Behaviors, 50, 101776</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.jbct.2023.05.002" target="_blank">Reach and uptake of digital mental health interventions based on CBT for college students: A systematic review</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, *Paraboschi, L., Grammer, A.C., Fennig, M., Graham, A.K., Yaeger, L.H., Newman, M.G., Wilfley, D.E., Taylor, C.B., Eisenberg, D., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">Journal of Behavioral and Cognitive Therapy, 33(2), 97–117</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1017/S0033291723000739" target="_blank">Evaluating whether a peer-led dissonance-based eating disorder prevention program prevents onset of each eating disorder type</a></p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Ghaderi, A., Rohde, P., Gau, J.M., Shaw, H., &amp; Stice, E.</p>
+            <p class="pub-journal">Psychological Medicine, 1–8</p>
+        </div>
+    </div>
+
+    <!-- 2020–2022 -->
+    <div class="pub-group">
+        <p class="group-label">2020–2022</p>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1002/eat.23798" target="_blank">Development and usability testing of a chatbot to promote mental health services use among individuals with eating disorders following screening</a></p>
+            <p class="pub-authors">*Shah, J., DePietro, B., <strong>D'Adamo, L.</strong>, Firebaugh, M.L., Laing, O., Fowler, L., Smolar, L., Sadeh Sharvit, S., Taylor, C.B., Wilfley, D.E., &amp; Fitzsimmons-Craft, E.E.</p>
+            <p class="pub-journal">International Journal of Eating Disorders (2022)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.jcbs.2022.03.008" target="_blank">The relation of grit to weight loss maintenance outcomes</a></p>
+            <p class="pub-authors">Call, C.C., <strong>D'Adamo, L.</strong>, Crane, N.T., Hagerman, C.J., &amp; Butryn, M.L.</p>
+            <p class="pub-journal">Journal of Contextual Behavioral Science, 24, 60–64 (2022)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1037/ccp0000682" target="_blank">Enhancing efficacy of a dissonance-based obesity and eating disorder prevention program: Experimental therapeutics</a></p>
+            <p class="pub-authors">Stice, E., Rohde, P., Gau, J., Butryn, M.L., Shaw, H., Cloud, K., &amp; <strong>D'Adamo, L.</strong></p>
+            <p class="pub-journal">Journal of Consulting and Clinical Psychology, 89(10), 793–804 (2021)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.brat.2021.103850" target="_blank">Examining weight suppression as a predictor and moderator of intervention outcomes in an eating disorder and obesity prevention trial</a></p>
+            <p class="pub-authors">Call, C.C., <strong>D'Adamo, L.</strong>, Butryn, M.L., &amp; Stice, E.</p>
+            <p class="pub-journal">Behaviour Research and Therapy (2021)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1016/j.eatbeh.2020.101448" target="_blank">Binge eating predicts adherence to digital self-monitoring during behavioral weight loss</a></p>
+            <p class="pub-authors">Martinelli, M.K., <strong>D'Adamo, L.</strong>, &amp; Butryn, M.L.</p>
+            <p class="pub-journal">Eating Behaviors, 39, 101448 (2020)</p>
+        </div>
+    </div>
+
+    <!-- CHAPTERS & EDITORIALS -->
+    <div class="pub-group">
+        <p class="group-label">Book Chapters & Editorials</p>
+
+        <div class="pub">
+            <p class="pub-title">Leveraging technology to improve screening, early detection, and intervention for eating disorders at scale</p>
+            <p class="pub-authors">Fitzsimmons-Craft, E.E., <strong>D'Adamo, L.</strong>, &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">In: R. Weissman &amp; K. Pike (Eds.), <em>Big Ideas in Eating Disorders</em>. American Psychological Association. (in press)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title">Weight management and eating pathology</p>
+            <p class="pub-authors"><strong>D'Adamo, L.</strong>, Fennig, M., Grammer, A.C., Jebeile, H., Fitzsimmons-Craft, E.E., &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">In: Raynor, H.A. &amp; Gigliotti, L. (Eds.), <em>Health Professional's Guide to Obesity and Weight Management</em>. Academy of Nutrition and Dietetics. (2024)</p>
+        </div>
+
+        <div class="pub">
+            <p class="pub-title"><a href="https://doi.org/10.1186/s40337-023-00857-1" target="_blank">Opportunities to advance research, intervention, and policy on stigma, eating disorders, and body image</a></p>
+            <p class="pub-authors">Pearl, R.L., Austin, S.B., Jebeile, H., <strong>D'Adamo, L.</strong>, &amp; Wilfley, D.E.</p>
+            <p class="pub-journal">Journal of Eating Disorders, 11(1), 1–4 (2023)</p>
+        </div>
+    </div>
+
+    <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank" class="scholar-link">
+        <i class="fas fa-graduation-cap"></i> Full list on Google Scholar
+    </a>
+
+</main>
+
+<footer>
+    <div class="footer-socials">
+        <a href="mailto:Laura.a.dadamo@drexel.edu"><i class="fas fa-envelope"></i> Email</a>
+        <a href="https://www.linkedin.com/in/laura-d-adamo-ms-696802162/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=s8gIUooAAAAJ&hl=en&oi=ao" target="_blank"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Laura D'Adamo. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
