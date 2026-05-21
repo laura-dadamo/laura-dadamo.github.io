@@ -55,6 +55,29 @@
             .training-entry,.rc-entry{grid-template-columns:1fr}
             .training-date,.rc-date{margin-bottom:6px}
         }
+    
+        /* HAMBURGER NAV */
+        .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:300}
+        .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cream);border-radius:2px;transition:all .25s ease}
+        .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+        .nav-hamburger.open span:nth-child(2){opacity:0}
+        .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+        @media(max-width:640px){
+            nav{padding:14px 20px}
+            .nav-hamburger{display:flex}
+            .nav-links{
+                display:none;
+                position:fixed;top:0;left:0;right:0;bottom:0;
+                background:var(--teal-deep);
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                gap:32px;
+                z-index:250;
+            }
+            .nav-links.open{display:flex}
+            .nav-links a{font-size:20px;opacity:.9;letter-spacing:.04em}
+        }
     </style>
 </head>
 <body>
@@ -64,13 +87,16 @@
         <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="LD">
         Laura D'Adamo
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html">About</a>
         <a href="research.html">Research</a>
         <a href="collaboration.html">Collaboration</a>
         <a href="clinical.html" class="active">Clinical</a>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
 <div class="page-header">
@@ -197,5 +223,21 @@
     </div>
     <p class="footer-copy">&copy; 2026 Laura D'Adamo. All Rights Reserved.</p>
 </footer>
+
+<script>
+function toggleNav(){
+    var hamburger = document.getElementById('nav-hamburger');
+    var links = document.getElementById('nav-links');
+    hamburger.classList.toggle('open');
+    links.classList.toggle('open');
+}
+// Close menu when a link is clicked
+document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){
+        document.getElementById('nav-hamburger').classList.remove('open');
+        document.getElementById('nav-links').classList.remove('open');
+    });
+});
+</script>
 </body>
 </html>
