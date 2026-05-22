@@ -74,29 +74,6 @@
             .page-header{padding:90px 24px 48px}main{padding:48px 24px 72px}
             .row-entry{grid-template-columns:1fr}.row-year{margin-bottom:4px}
         }
-    
-        /* HAMBURGER NAV */
-        .nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px;background:none;border:none;z-index:300}
-        .nav-hamburger span{display:block;width:22px;height:2px;background:var(--cream);border-radius:2px;transition:all .25s ease}
-        .nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-        .nav-hamburger.open span:nth-child(2){opacity:0}
-        .nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-        @media(max-width:640px){
-            nav{padding:14px 20px}
-            .nav-hamburger{display:flex}
-            .nav-links{
-                display:none;
-                position:fixed;top:0;left:0;right:0;bottom:0;
-                background:var(--teal-deep);
-                flex-direction:column;
-                align-items:center;
-                justify-content:center;
-                gap:32px;
-                z-index:250;
-            }
-            .nav-links.open{display:flex}
-            .nav-links a{font-size:20px;opacity:.9;letter-spacing:.04em}
-        }
     </style>
 </head>
 <body>
@@ -106,16 +83,13 @@
         <img src="https://github.com/laura-dadamo/laura-dadamo.github.io/raw/main/Lettermark.svg" alt="LD">
         Laura D'Adamo
     </a>
-    <div class="nav-links" id="nav-links">
+    <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="aboutme.html">About</a>
         <a href="research.html">Research</a>
         <a href="collaboration.html" class="active">Collaboration</a>
         <a href="clinical.html">Clinical</a>
     </div>
-    <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu" onclick="toggleNav()">
-        <span></span><span></span><span></span>
-    </button>
 </nav>
 
 <div class="page-header">
@@ -128,7 +102,7 @@
     <h2 class="sec-title">Research Collaborators & Networks</h2>
 
     <div class="collab-intro">
-        <p>Much of my work has grown out of sustained collaborative relationships across institutions. Some of my close collaborators include the ASPIRE Lab at Nemours Children's Health (PI: Dr. Stephanie Manasse), the <a href="https://accesslab.wustl.edu/" target="_blank" style="color:var(--teal-deep);text-decoration:none;border-bottom:1px solid rgba(3,65,71,.25);transition:color .15s,border-color .15s" onmouseover="this.style.color='var(--red)';this.style.borderColor='var(--red)'" onmouseout="this.style.color='var(--teal-deep)';this.style.borderColor='rgba(3,65,71,.25)'">ACCESS Lab at Washington University in St. Louis</a> (PI: Dr. Ellen Fitzsimmons-Craft), and the <a href="https://healthyweightandwellness.wustl.edu/" target="_blank" style="color:var(--teal-deep);text-decoration:none;border-bottom:1px solid rgba(3,65,71,.25);transition:color .15s,border-color .15s" onmouseover="this.style.color='var(--red)';this.style.borderColor='var(--red)'" onmouseout="this.style.color='var(--teal-deep)';this.style.borderColor='rgba(3,65,71,.25)'">Center for Healthy Weight and Wellness at Washington University School of Medicine</a> (PI: Dr. Denise Wilfley). I also regularly collaborate with researchers across various fields (e.g., computer science, public health) and sectors (e.g., industry).</p>
+        <p>Much of my work has grown out of sustained collaborative relationships across institutions. Some of my close collaborators include the ASPIRE Lab at Nemours Children's Health (PI: Dr. Stephanie Manasse), the <a href="https://accesslab.wustl.edu/" target="_blank" style="color:var(--teal-deep);text-decoration:none;border-bottom:1px solid rgba(3,65,71,.25);transition:color .15s,border-color .15s" onmouseover="this.style.color='var(--red)';this.style.borderColor='var(--red)'" onmouseout="this.style.color='var(--teal-deep)';this.style.borderColor='rgba(3,65,71,.25)'">ACCESS Lab at Washington University in St. Louis</a> (PI: Dr. Ellen Fitzsimmons-Craft), and the <a href="https://healthyweightandwellness.wustl.edu/" target="_blank" style="color:var(--teal-deep);text-decoration:none;border-bottom:1px solid rgba(3,65,71,.25);transition:color .15s,border-color .15s" onmouseover="this.style.color='var(--red)';this.style.borderColor='var(--red)'" onmouseout="this.style.color='var(--teal-deep)';this.style.borderColor='rgba(3,65,71,.25)'">Center for Healthy Weight and Wellness at Washington University School of Medicine</a> (PI: Dr. Denise Wilfley). I also regularly collaborate with researchers across various fields (e.g., computer science, public health) and sectors. For example, I completed an internship at Lyra Health (2024), where I developed clinical content and provider training materials for a blended care therapy program and conducted mixed-methods research on the program (<a href="https://doi.org/10.1177/20552076261444044" target="_blank" style="color:var(--text-muted);text-decoration:none;border-bottom:1px solid rgba(0,0,0,.15);transition:color .15s" onmouseover="this.style.color='var(--red)'" onmouseout="this.style.color='var(--text-muted)'">Lattie, D'Adamo, Beltzer, et al., 2026, <em>Digital Health</em></a>).</p>
     </div>
 
     <div class="section-gap">
@@ -228,21 +202,5 @@
     </div>
     <p class="footer-copy">&copy; 2026 Laura D'Adamo. All Rights Reserved.</p>
 </footer>
-
-<script>
-function toggleNav(){
-    var hamburger = document.getElementById('nav-hamburger');
-    var links = document.getElementById('nav-links');
-    hamburger.classList.toggle('open');
-    links.classList.toggle('open');
-}
-// Close menu when a link is clicked
-document.querySelectorAll('.nav-links a').forEach(function(a){
-    a.addEventListener('click', function(){
-        document.getElementById('nav-hamburger').classList.remove('open');
-        document.getElementById('nav-links').classList.remove('open');
-    });
-});
-</script>
 </body>
 </html>
